@@ -72,7 +72,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void run() {
                 try {
-                    URL url = new URL("http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=30");
+                    URL url = new URL("http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=10");
                     conn = (HttpURLConnection) url.openConnection();
                     conn.setRequestMethod("GET");
                     conn.setConnectTimeout(5000);

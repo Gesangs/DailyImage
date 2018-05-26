@@ -4,10 +4,11 @@
     android:layout_height="match_parent">
 
     <com.loopj.android.image.SmartImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:id="@+id/small_imageView" />
 
     <TextView
@@ -15,6 +16,7 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/img_desc_textView"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_gravity="center_vertical" />
 </LinearLayout>

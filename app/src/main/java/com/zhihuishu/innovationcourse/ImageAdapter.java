@@ -20,9 +20,9 @@ public class ImageAdapter extends ArrayAdapter<Image> {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, final ViewGroup parent) {
         final Image image = getItem(position);
-        View oneImageView = LayoutInflater.from(getContext()).inflate(R.layout.image_item, parent, false);
+        final View oneImageView = LayoutInflater.from(getContext()).inflate(R.layout.image_item, parent, false);
 
         SmartImageView imageView = (SmartImageView) oneImageView.findViewById(R.id.small_imageView);
         TextView textView = (TextView) oneImageView.findViewById(R.id.img_desc_textView);
@@ -35,9 +35,11 @@ public class ImageAdapter extends ArrayAdapter<Image> {
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), ImageDetailActivity.class);
 
-                intent.putExtra("image_imgUrl", image.getImgUrl());
+                intent.putExtra ("image_imgUrl", image.getImgUrl());
 
                 intent.putExtra("image_desc", image.getDesc());
+
+                intent.putExtra ("image_time", image.getTime ());
 
                 getContext().startActivity(intent);
             }
