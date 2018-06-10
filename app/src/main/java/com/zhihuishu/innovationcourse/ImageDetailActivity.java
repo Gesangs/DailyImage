@@ -12,8 +12,10 @@ import android.os.Message;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 import com.loopj.android.image.SmartImageView;
 
@@ -61,6 +63,7 @@ public class ImageDetailActivity extends ActionBarActivity {
         imageView.setOnLongClickListener (new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
+                Toast.makeText (ImageDetailActivity.this, "正在保存", Toast.LENGTH_SHORT).show ();
                 downLoadImage (url);
                 return true;
             }
